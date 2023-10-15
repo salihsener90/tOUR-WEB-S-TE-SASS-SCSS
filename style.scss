@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* fazrklı dosyada yazdığımız scss style leri import ediyouz*/  
+@import '_header';
+@import '_navbar';
+@import '_events';
+@import '_explore';
+@import '_tours';
+@import '_footer';
+
+
+
+:root{
+
+    --primary-color: #fc036b;
+    --secondary-color: #484872;
+    --thirdy-color:#49497e;
+    --text-color: whitesmoke;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html, body{
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: aliceblue;
+}
+li{
+    list-style: none;
+    
+
+}
+h4{
+    font-size: 4vmin;
+    color: var(--secondary-color);
+    margin: 24px auto;
+}
+p{
+    color: #7c7c7c;
+    padding: 0 40px;
+}
+section{
+    width: 80%;
+    margin: 80px auto;
+}
+
+.btn{
+    background-color: var(--primary-color);
+   padding: 8px 15px;
+   border-radius: 20px;
+   color: var(--text-color);
+    
+}
+
+.btn:hover{
+ background-color: var(--text-color);
+ color: var(--primary-color);
+
+}
+img{
+    transition: transform .3s ease;
+}
+img:hover{ 
+    transform: scale(1.1);
+    transition: transform .3s ease;
+}
+.line{
+    width: 150px;
+    height: 5px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+
+.navbar-menu-btn{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    width: 40px;
+    display: none;
+}
+/* mevcut sayfadayken navbardaki yazının stili*/ 
+.active{
+color: var(--primary-color);
+text-decoration: underline;
+font-weight: bold;
+}
+
+/*ortak yapıya sahip olduğu için buraya aldık*/
+
+.events-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.events-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+// ?Responsive//
+
+@media only screen and (max-width: 850px){
+
+    .navbar{
+        padding: 0;
+    
+        &-logo{
+            position: absolute;
+            top: 30px;
+            left: 30px;
+        }
+        &-links{
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            background: var(--secondary-color) ;
+            transition: all .5s ease;
+            
+            margin-top: -900px;
+    
+            li{
+                margin: 30px auto;
+            }
+        }
+        &-menu-btn{
+            display: block;
+        }
+    }
+.mobile-menu{
+    border-bottom-right-radius: 200px;
+    margin-top: 0;
+}
+.events-row{
+    flex-direction: column;
+
+    &-col{
+        margin: 20px auto;
+    }
+}
+.explore-content{
+    width:100% ;
+}
+}

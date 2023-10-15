@@ -1,0 +1,279 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&family=Poppins:wght@100;200;300;400;500;600&display=swap");
+/* fazrklı dosyada yazdığımız scss style leri import ediyouz*/
+.header {
+  background-color: aqua;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(images/header-bg.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.header-content {
+  margin-bottom: 150px;
+  color: var(--text-color);
+  text-align: center;
+}
+.header-content h1 {
+  font-size: 7vmin;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.header-content h2 {
+  font-size: 4vmin;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px;
+  color: var(--text-color);
+}
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+.navbar-links li {
+  margin: 0 30px;
+}
+
+.events-title {
+  text-align: center;
+  font-size: 4vmin;
+  color: var(--thirdy-color);
+  margin-top: 50px;
+}
+.events-row {
+  margin-top: 50px;
+}
+.events-row-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.events-row-col img {
+  width: 80%;
+}
+.events-row-col .btn {
+  margin-top: 30px;
+}
+
+.explore {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  background-image: url("./images/bg2.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+.explore-content {
+  width: 50%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.explore-content .btn {
+  margin-top: 40px;
+}
+.explore-content h1 {
+  font-size: 7vmin;
+  color: var(--text-color);
+  margin: 50px;
+}
+.explore-content p {
+  color: rgb(221, 221, 221);
+}
+
+.tours {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.tours-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.tours-left .btn {
+  margin-top: 80px !important;
+}
+.tours-right {
+  width: 50%;
+  float: right;
+}
+.tours-right img {
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+}
+.tours-right .image-gallery {
+  width: 600px !important;
+}
+
+.footer {
+  width: 100%;
+  height: 200px;
+  padding: 20px 80px;
+  background-color: var(--secondary-color);
+  text-align: center;
+}
+.footer p {
+  color: var(--text-color);
+  margin: 20px auto;
+}
+
+:root {
+  --primary-color: #fc036b;
+  --secondary-color: #484872;
+  --thirdy-color:#49497e;
+  --text-color: whitesmoke;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: aliceblue;
+}
+
+li {
+  list-style: none;
+}
+
+h4 {
+  font-size: 4vmin;
+  color: var(--secondary-color);
+  margin: 24px auto;
+}
+
+p {
+  color: #7c7c7c;
+  padding: 0 40px;
+}
+
+section {
+  width: 80%;
+  margin: 80px auto;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  padding: 8px 15px;
+  border-radius: 20px;
+  color: var(--text-color);
+}
+
+.btn:hover {
+  background-color: var(--text-color);
+  color: var(--primary-color);
+}
+
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.line {
+  width: 150px;
+  height: 5px;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  margin: 10px auto;
+}
+
+.navbar-menu-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  width: 40px;
+  display: none;
+}
+
+/* mevcut sayfadayken navbardaki yazının stili*/
+.active {
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/*ortak yapıya sahip olduğu için buraya aldık*/
+.events-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.events-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media only screen and (max-width: 850px) {
+  .navbar {
+    padding: 0;
+  }
+  .navbar-logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    background: var(--secondary-color);
+    transition: all 0.5s ease;
+    margin-top: -900px;
+  }
+  .navbar-links li {
+    margin: 30px auto;
+  }
+  .navbar-menu-btn {
+    display: block;
+  }
+  .mobile-menu {
+    border-bottom-right-radius: 200px;
+    margin-top: 0;
+  }
+  .events-row {
+    flex-direction: column;
+  }
+  .events-row-col {
+    margin: 20px auto;
+  }
+  .explore-content {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
